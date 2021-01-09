@@ -1,0 +1,76 @@
+<h2>{{"Welcome "+name+ surname}}</h2>
+<h3>{{greeting()}}</h3>
+<h4>{{siteurl}}</h4>
+
+<div>
+  <input [disabled]="isdisabled" [id]="myid" type="text" value="vishwas">
+</div>
+<br>
+<br>
+<!--Attribute Binding Example-->
+<table>
+  <thead>
+    <th attr.colspan="{{col}}">{{tableheaddata}}</th>
+
+  </thead>
+  <tbody>
+    <tr>
+      <td>FirstName</td>
+      <td>{{firstname}}</td>
+    </tr>
+    <tr>
+      <td>LastName</td>
+      <td>{{lastname}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<!--Class Binding-->
+<div>
+  <h2 class="colorclass" [class]='classapply'>My Heading</h2>
+</div>
+<div>
+  <button [class.boldclass]="hasError">My button</button>
+</div>
+
+<!--If want to apply condionaly multiple classes use Ng Class-->
+<div>
+  <p [ngClass]="itsobjmessage">I want to use this</p>
+</div>
+<!--Style Binding-->
+
+<div [style.color]="'orange'" class="mat-display-2">Yes,Am I display 4?With Style Binding</div>
+<div [style.color]="!hasError? 'red': 'green'" class="mat-display-2">Yes,Am I display 4?With Style Binding</div>
+
+<div [style.color]="highlight">
+  <p>Yes,Am I display 4?With Style Binding</p>
+</div>
+
+
+<mat-grid-list cols="4" rowHeight="1:2">
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="./assets/images/barin23.jpg " alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
